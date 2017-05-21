@@ -1,7 +1,7 @@
 <?php
 
 require_once $_SESSION['rootfolder'] . '/API/API.php';
-require_once $_SESSION['rootfolder'] . '/DataProvider/GallerieProvider.php';
+
 
 /**
  * Description of FotosAPI
