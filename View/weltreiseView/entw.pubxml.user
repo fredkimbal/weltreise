@@ -6,7 +6,7 @@ indem Sie diese MSBuild-Datei bearbeiten. Besuchen Sie "http://go.microsoft.com/
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuy6shupQ6k6r5IThPyj/iQAAAAACAAAAAAAQZgAAAAEAACAAAAAsYFaDIqE1jg38+IGhCyRufVGURrJPsByxoTkfwKwZ8gAAAAAOgAAAAAIAACAAAABizMLxbml/XFwz8H8JzhcUSj9onPkqZl4UjAyzDige/CAAAAA4IyknvabjCDjUTQS1t4JesiWqqkShojcXm5di7F24x0AAAAAwOOveTtY6skmyRzbwYgQYv2spGLyXtF8rQ8NVmYgzOAW3Y/wtfKW9OKUbJHmzFxOVriJFLgQYgCvqHWrjRx6K</EncryptedPassword>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+WZDsPVSOU6j+ANDXSzVxAAAAAACAAAAAAAQZgAAAAEAACAAAABCgOqOdeVqcYsPC8DoUKYRo+Jegt+i8w65J3Qfrg/YKAAAAAAOgAAAAAIAACAAAAAI8rlBIpc5g2Fbd0nNLsMf4YFcY7s8CBtPSmYnlV7I+SAAAABw7hKv6XchRoegcQDeXaagQqNTC9vLXhRocJJMoL8ejkAAAACo+KXc3HzHcKSh1asHHFO1WolgtxiJ3qMbt275C9wYivc8iIPchUwrE9GVj6uC3wwNdBwaXj0tC53FBTbanGbk</EncryptedPassword>
     <_PublishTargetUrl>ftp://ftp.andynick.ch/httpdocs/weltreise/entw</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
@@ -14,46 +14,52 @@ indem Sie diese MSBuild-Datei bearbeiten. Besuchen Sie "http://go.microsoft.com/
       <publishTime>03/05/2017 13:04:31</publishTime>
     </File>
     <File Include="app.js">
-      <publishTime>04/10/2017 22:22:36</publishTime>
+      <publishTime>05/22/2017 22:55:23</publishTime>
     </File>
     <File Include="bin/weltreiseView.dll">
-      <publishTime>04/10/2017 22:22:44</publishTime>
+      <publishTime>05/22/2017 21:54:33</publishTime>
     </File>
     <File Include="css/app.css">
-      <publishTime>03/05/2017 13:39:17</publishTime>
+      <publishTime>05/22/2017 20:08:07</publishTime>
+    </File>
+    <File Include="css/site.css">
+      <publishTime>05/22/2017 22:55:15</publishTime>
+    </File>
+    <File Include="css/w3.css">
+      <publishTime>05/22/2017 20:38:16</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>04/10/2017 23:05:13</publishTime>
+      <publishTime>05/22/2017 20:08:07</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>04/10/2017 22:15:41</publishTime>
+      <publishTime>05/22/2017 20:30:17</publishTime>
     </File>
     <File Include="Scripts/jquery-3.1.1.js">
-      <publishTime>04/10/2017 22:12:48</publishTime>
+      <publishTime>05/22/2017 20:28:06</publishTime>
     </File>
     <File Include="Scripts/jquery-3.1.1.min.js">
-      <publishTime>04/10/2017 22:12:48</publishTime>
+      <publishTime>05/22/2017 20:28:06</publishTime>
     </File>
     <File Include="Scripts/jquery-3.1.1.min.map">
-      <publishTime>04/10/2017 22:12:48</publishTime>
+      <publishTime>05/22/2017 20:28:06</publishTime>
     </File>
     <File Include="Scripts/jquery-3.1.1.slim.js">
-      <publishTime>04/10/2017 22:12:48</publishTime>
+      <publishTime>05/22/2017 20:28:06</publishTime>
     </File>
     <File Include="Scripts/jquery-3.1.1.slim.min.js">
-      <publishTime>04/10/2017 22:12:48</publishTime>
+      <publishTime>05/22/2017 20:28:06</publishTime>
     </File>
     <File Include="Scripts/jquery-3.1.1.slim.min.map">
-      <publishTime>04/10/2017 22:12:48</publishTime>
+      <publishTime>05/22/2017 20:28:06</publishTime>
     </File>
     <File Include="ts/Navigation.js">
-      <publishTime>04/10/2017 22:22:36</publishTime>
+      <publishTime>05/22/2017 22:55:23</publishTime>
     </File>
     <File Include="ts/Reports.js">
-      <publishTime>04/10/2017 22:22:43</publishTime>
+      <publishTime>05/22/2017 22:55:23</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>03/05/2017 13:13:44</publishTime>
+      <publishTime>05/22/2017 21:54:34</publishTime>
     </File>
   </ItemGroup>
 </Project>

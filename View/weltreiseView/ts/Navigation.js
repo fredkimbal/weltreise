@@ -9,6 +9,6 @@ var Navigation;
             });
         };
         return NavigationManager;
-    })();
+    }());
     Navigation.NavigationManager = NavigationManager;
 })(Navigation || (Navigation = {}));

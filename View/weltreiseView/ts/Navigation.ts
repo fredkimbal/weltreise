@@ -6,7 +6,6 @@
             $("#lnkReportsVelo").click(() => {
                 Reports.ReportsManager.Show();
             });
-
         }
 
     }
