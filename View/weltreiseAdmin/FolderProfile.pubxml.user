@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Diese Datei wird vom Veröffentlichungs-/Paketierungsprozess Ihres Webprojekts verwendet. Sie können das Verhalten dieses Prozesses anpassen,
+indem Sie diese MSBuild-Datei bearbeiten. Weitere Informationen hierzu finden Sie unter https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\wamp64\www\admin</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="app.js">
+      <publishTime>11/01/2017 17:50:25</publishTime>
+    </File>
+    <File Include="bin/weltreiseAdmin.dll">
+      <publishTime>10/14/2017 18:14:01</publishTime>
+    </File>
+    <File Include="bin/weltreiseAdmin.pdb">
+      <publishTime>10/14/2017 18:14:01</publishTime>
+    </File>
+    <File Include="Content/images/header_1200.jpg">
+      <publishTime>07/11/2017 21:48:32</publishTime>
+    </File>
+    <File Include="Content/images/header_320.jpg">
+      <publishTime>07/11/2017 21:48:32</publishTime>
+    </File>
+    <File Include="Content/images/header_480.jpg">
+      <publishTime>07/11/2017 21:48:32</publishTime>
+    </File>
+    <File Include="Content/images/header_600.jpg">
+      <publishTime>07/11/2017 21:48:32</publishTime>
+    </File>
+    <File Include="Content/images/header_768.jpg">
+      <publishTime>07/11/2017 21:48:32</publishTime>
+    </File>
+    <File Include="Content/images/header_996.jpg">
+      <publishTime>07/11/2017 21:48:32</publishTime>
+    </File>
+    <File Include="Content/images/header_large.jpg">
+      <publishTime>07/11/2017 21:48:32</publishTime>
+    </File>
+    <File Include="Content/images/layers-2x.png">
+      <publishTime>07/11/2017 21:48:32</publishTime>
+    </File>
+    <File Include="Content/images/layers.png">
+      <publishTime>07/11/2017 21:48:32</publishTime>
+    </File>
+    <File Include="Content/images/marker-icon-2x.png">
+      <publishTime>07/11/2017 21:48:32</publishTime>
+    </File>
+    <File Include="Content/images/marker-icon.png">
+      <publishTime>07/11/2017 21:48:32</publishTime>
+    </File>
+    <File Include="Content/images/marker-shadow.png">
+      <publishTime>07/11/2017 21:48:32</publishTime>
+    </File>
+    <File Include="Content/images/NavHeader.jpg">
+      <publishTime>07/11/2017 21:48:32</publishTime>
+    </File>
+    <File Include="css/app.css">
+      <publishTime>07/11/2017 21:51:36</publishTime>
+    </File>
+    <File Include="css/site.css">
+      <publishTime>07/11/2017 21:51:36</publishTime>
+    </File>
+    <File Include="css/w3.css">
+      <publishTime>07/11/2017 21:51:36</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>10/14/2017 19:52:18</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>07/12/2017 21:14:53</publishTime>
+    </File>
+    <File Include="Scripts/FileUploader.js">
+      <publishTime>08/21/2017 23:09:53</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.js">
+      <publishTime>07/12/2017 21:14:52</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.min.js">
+      <publishTime>07/12/2017 21:14:52</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.min.map">
+      <publishTime>07/12/2017 21:14:52</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.slim.js">
+      <publishTime>07/12/2017 21:14:52</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.slim.min.js">
+      <publishTime>07/12/2017 21:14:51</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.slim.min.map">
+      <publishTime>07/12/2017 21:14:51</publishTime>
+    </File>
+    <File Include="ts/CommonFunctions.js">
+      <publishTime>11/01/2017 17:50:25</publishTime>
+    </File>
+    <File Include="ts/FileUploader.js">
+      <publishTime>11/01/2017 17:50:25</publishTime>
+    </File>
+    <File Include="ts/FotoAdmin.js">
+      <publishTime>11/01/2017 17:50:25</publishTime>
+    </File>
+    <File Include="ts/GpxImport.js">
+      <publishTime>11/01/2017 17:50:25</publishTime>
+    </File>
+    <File Include="ts/Navigation.js">
+      <publishTime>11/01/2017 17:50:25</publishTime>
+    </File>
+    <File Include="ts/Notification.js">
+      <publishTime>11/01/2017 17:50:25</publishTime>
+    </File>
+    <File Include="ts/ReportAdmin.js">
+      <publishTime>11/01/2017 17:50:25</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>10/14/2017 18:14:02</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
