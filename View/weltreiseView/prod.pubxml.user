@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAALoWlMOwWYUCFTHJDqN7TeQAAAAACAAAAAAAQZgAAAAEAACAAAABUDome+mQpLkafrWzVkYOOUTfGnmTDHCI/PkZjtVxwGAAAAAAOgAAAAAIAACAAAAA16+Zz1exuWuXU4jCFYxgnEBi+s7kNmaDY/GXchtA/7CAAAADntXlBKXuSf9nGp/jJOrIrPtNuoRr5tl6VhdnFH+73tUAAAAD2/0zOyqnAJfKgU3tiUVz2rEJhI0PD1dxc1ABInOMLzHeV7A5bhbqKobgTCWkyWxfo+AaJACHmWA2QvlJhSs/0</EncryptedPassword>
+    <_PublishTargetUrl>ftp://ftp.luanaundandy.ch</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="app.js">
+      <publishTime>01/03/2018 17:16:19</publishTime>
+    </File>
+    <File Include="bin/weltreiseView.dll">
+      <publishTime>01/03/2018 17:16:21</publishTime>
+    </File>
+    <File Include="bin/weltreiseView.pdb">
+      <publishTime>01/03/2018 17:16:21</publishTime>
+    </File>
+    <File Include="Content/header_480.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/header_600.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/images/andy.jpg">
+      <publishTime>01/09/2017 20:29:43</publishTime>
+    </File>
+    <File Include="Content/images/header_1200.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/images/header_320.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/images/header_480.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/images/header_600.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/images/header_768.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/images/header_996.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/images/header_large.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/images/layers-2x.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/images/layers.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/images/luana.jpg">
+      <publishTime>01/09/2017 20:29:43</publishTime>
+    </File>
+    <File Include="Content/images/marker-icon-2x.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/images/marker-icon.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/images/marker-shadow.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/images/NavHeader.jpg">
+      <publishTime>03/07/2017 20:46:06</publishTime>
+    </File>
+    <File Include="Content/leaflet.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/velotour2015.gpx">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="css/app.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="css/PhotoSwipe.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="css/site.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="css/w3.css">
+      <publishTime>09/10/2017 19:23:24</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>01/10/2018 22:45:50</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/images/layers-2x.png">
+      <publishTime>01/03/2018 13:31:13</publishTime>
+    </File>
+    <File Include="Scripts/images/layers.png">
+      <publishTime>01/03/2018 13:31:13</publishTime>
+    </File>
+    <File Include="Scripts/images/marker-icon-2x.png">
+      <publishTime>01/03/2018 13:31:13</publishTime>
+    </File>
+    <File Include="Scripts/images/marker-icon.png">
+      <publishTime>01/03/2018 13:31:14</publishTime>
+    </File>
+    <File Include="Scripts/images/marker-shadow.png">
+      <publishTime>01/03/2018 13:31:14</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.min.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.min.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.slim.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.slim.min.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.slim.min.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/leaflet-0.7.3.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/leaflet-0.7.3.min.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/PhotoSwipe/default-skin/default-skin.css">
+      <publishTime>05/09/2016 21:13:09</publishTime>
+    </File>
+    <File Include="Scripts/PhotoSwipe/default-skin/default-skin.png">
+      <publishTime>05/09/2016 21:13:09</publishTime>
+    </File>
+    <File Include="Scripts/PhotoSwipe/default-skin/default-skin.svg">
+      <publishTime>05/09/2016 21:13:09</publishTime>
+    </File>
+    <File Include="Scripts/PhotoSwipe/default-skin/preloader.gif">
+      <publishTime>05/09/2016 21:13:09</publishTime>
+    </File>
+    <File Include="Scripts/PhotoSwipe/photoswipe-ui-default.js">
+      <publishTime>05/09/2016 21:13:10</publishTime>
+    </File>
+    <File Include="Scripts/PhotoSwipe/photoswipe-ui-default.min.js">
+      <publishTime>05/09/2016 21:13:10</publishTime>
+    </File>
+    <File Include="Scripts/PhotoSwipe/photoswipe.css">
+      <publishTime>05/09/2016 21:13:09</publishTime>
+    </File>
+    <File Include="Scripts/PhotoSwipe/photoswipe.js">
+      <publishTime>05/09/2016 21:13:10</publishTime>
+    </File>
+    <File Include="Scripts/PhotoSwipe/photoswipe.min.js">
+      <publishTime>05/09/2016 21:13:10</publishTime>
+    </File>
+    <File Include="ts/CommonFunctions.js">
+      <publishTime>01/03/2018 17:16:19</publishTime>
+    </File>
+    <File Include="ts/Fotos.js">
+      <publishTime>01/03/2018 17:16:19</publishTime>
+    </File>
+    <File Include="ts/GalleryFunctions.js">
+      <publishTime>01/03/2018 17:16:19</publishTime>
+    </File>
+    <File Include="ts/Map.js">
+      <publishTime>01/03/2018 17:16:19</publishTime>
+    </File>
+    <File Include="ts/Navigation.js">
+      <publishTime>01/03/2018 17:16:19</publishTime>
+    </File>
+    <File Include="ts/Portrait.js">
+      <publishTime>01/03/2018 17:16:19</publishTime>
+    </File>
+    <File Include="ts/Reports.js">
+      <publishTime>01/03/2018 17:16:19</publishTime>
+    </File>
+    <File Include="ts/Startseite.js">
+      <publishTime>01/03/2018 17:16:19</publishTime>
+    </File>
+    <File Include="ts/Verification.js">
+      <publishTime>01/03/2018 17:16:19</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>01/03/2018 17:17:28</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
