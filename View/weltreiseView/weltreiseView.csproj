@@ -17,28 +17,77 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\header_480.jpg" />
+    <Content Include="Content\header_600.jpg" />
+    <Content Include="Content\images\andy.jpg" />
+    <Content Include="Content\images\header_1200.jpg" />
+    <Content Include="Content\images\header_320.jpg" />
+    <Content Include="Content\images\header_480.jpg" />
+    <Content Include="Content\images\header_600.jpg" />
+    <Content Include="Content\images\header_768.jpg" />
+    <Content Include="Content\images\header_996.jpg" />
+    <Content Include="Content\images\header_large.jpg" />
+    <Content Include="Content\images\layers-2x.png" />
+    <Content Include="Content\images\layers.png" />
+    <Content Include="Content\images\luana.jpg" />
+    <Content Include="Content\images\marker-icon-2x.png" />
+    <Content Include="Content\images\marker-icon.png" />
+    <Content Include="Content\images\marker-shadow.png" />
+    <Content Include="Content\images\NavHeader.jpg" />
+    <Content Include="Content\leaflet.css" />
     <Content Include="css\app.css" />
+    <Content Include="css\PhotoSwipe.css" />
     <Content Include="css\site.css" />
     <Content Include="css\w3.css" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
+    <Content Include="Content\velotour2015.gpx" />
+    <None Include="FolderProfile.pubxml" />
+    <None Include="prod.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\images\layers-2x.png" />
+    <Content Include="Scripts\images\layers.png" />
+    <Content Include="Scripts\images\marker-icon-2x.png" />
+    <Content Include="Scripts\images\marker-icon.png" />
+    <Content Include="Scripts\images\marker-shadow.png" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Scripts\leaflet-0.7.3.js" />
+    <Content Include="Scripts\leaflet-0.7.3.min.js" />
+    <Content Include="Scripts\PhotoSwipe\default-skin\default-skin.css" />
+    <Content Include="Scripts\PhotoSwipe\default-skin\default-skin.png" />
+    <Content Include="Scripts\PhotoSwipe\default-skin\default-skin.svg" />
+    <Content Include="Scripts\PhotoSwipe\default-skin\preloader.gif" />
+    <Content Include="Scripts\PhotoSwipe\photoswipe-ui-default.js" />
+    <Content Include="Scripts\PhotoSwipe\photoswipe-ui-default.min.js" />
+    <Content Include="Scripts\PhotoSwipe\photoswipe.css" />
+    <Content Include="Scripts\PhotoSwipe\photoswipe.js" />
+    <Content Include="Scripts\PhotoSwipe\photoswipe.min.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="Scripts\typings\geojson\geojson.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\leaflet\leaflet-0.7.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\photoswipe\photoswipe.d.ts" />
+    <TypeScriptCompile Include="ts\CommonFunctions.ts" />
+    <TypeScriptCompile Include="ts\Fotos.ts" />
+    <TypeScriptCompile Include="ts\GalleryFunctions.ts" />
+    <TypeScriptCompile Include="ts\Map.ts" />
     <TypeScriptCompile Include="ts\Navigation.ts" />
+    <TypeScriptCompile Include="ts\Portrait.ts" />
     <TypeScriptCompile Include="ts\Reports.ts" />
+    <TypeScriptCompile Include="ts\Startseite.ts" />
+    <TypeScriptCompile Include="ts\Verification.ts" />
   </ItemGroup>
   <ItemGroup>
     <None Include="entw.pubxml" />

@@ -72,6 +72,9 @@ abstract class API {
             case 'PUT':
                 $this->request = $this->_cleanInputs($_GET);                
                 break;
+            case 'UPDATE':
+                $this->request = $this->_cleanInputs($_GET);                
+                break;
             default:
                 $this->_response('Invalid Method', 405);
                 break;

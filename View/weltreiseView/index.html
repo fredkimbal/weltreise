@@ -4,54 +4,97 @@
 <head>
     <meta charset="utf-8" />
     <title>Luana &amp; Andy on Tour</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/app.css" type="text/css" />
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="css/site.css" type="text/css" />
+    <link rel="stylesheet" href="css/PhotoSwipe.css" type="text/css" />
+    <link rel="stylesheet" href="Scripts/PhotoSwipe/photoswipe.css" type="text/css">
+    <link rel="stylesheet" href="Scripts/PhotoSwipe/default-skin/default-skin.css" type="text/css">
+   <!-- <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">-->
+    <link rel="stylesheet" href="css/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Content/leaflet.css" />
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/leaflet-0.7.3.min.js"></script>
+    <script src="Scripts/PhotoSwipe/photoswipe.min.js"></script>
+    <script src="Scripts/PhotoSwipe/photoswipe-ui-default.min.js"></script>
 
     <script src="app.js"></script>
-    <script src="Scripts/jquery-3.1.1.min.js"></script>
+
+    <script src="ts/CommonFunctions.js"></script>
     <script src="ts/Navigation.js"></script>
     <script src="ts/Reports.js"></script>
+    <script src="ts/Map.js"></script>
+    <script src="ts/Startseite.js"></script>
+    <script src="ts/Verification.js"></script>
+    <script src="ts/GalleryFunctions.js"></script>
+    <script src="ts/Fotos.js"></script>
+    <script src="ts/Portrait.js"></script>
 </head>
 <body>
 
 
     <nav class="w3-sidenav w3-collapse w3-white w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidenav">
-        <a href="#" class="w3-border-bottom w3-large"><img src="https://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>
-        <a href="javascript:void(0)" onclick="w3_close()"
-           class="w3-text-teal w3-hide-large w3-closenav w3-large">Close<i class="fa fa-remove"></i></a>
-        <a href="#" class="w3-light-grey w3-medium">Startseite</a>
-
-
-        <a href="#">Vorbereitung</a>
+        <div style="height:114px"><img src="Content/images/NavHeader.jpg" /></div>
+        <a id="closeLink" href="javascript:void(0)"
+           class="w3-text-teal w3-hide-large w3-closenav w3-large">Schliessen<i class="fa fa-remove"></i></a>
+        <a href="#" id="lnkStartseite" class="w3-light-grey w3-medium navigationLink" data-site="start">Startseite</a>
         <div class="w3-accordion">
-            <a onclick="myAccordion('veloAccordiom')" href="javascript:void(0)">Veloabenteuer <i class="fa fa-caret-down"></i></a>
-            <div id="veloAccordiom" class="w3-accordion-content w3-animate-left w3-padding">
-                <a href="#" id="lnkReportsVelo">Berichte</a>
-                <a href="#">Reiseroute</a>
-                <a href="#">Fotos</a>
-                <a href="#">Ausrüstung</a>
+            <a id="accordionPortrait" href="javascript:void(0)" class="accordionLink" data-accordion-name= "portraitAccordion">&Uumlber uns <i class="fa fa-caret-down"></i></a>
+            <div id="portraitAccordion" class="w3-accordion-content w3-animate-left w3-padding">
+                <a href="#" id="lnkPortraitLuana" class="navigationLink" data-site="portrait_luana">Luana</a>
+                <a href="#" id="lnkPortraitAndy" class="navigationLink" data-site="portrait_andy">Andy</a>
             </div>
         </div>
-        <a href="#">Australien</a>
+        <div class="w3-accordion">
+            <a id="accordionAustralien" href="javascript:void(0)" data-accordion-name="AustralienAccordion" class="accordionLink">Australien / Neuseeland <i class="fa fa-caret-down"></i></a>
+            <div id="AustralienAccordion" class="w3-accordion-content w3-animate-left w3-padding">
+                <a href="#" class="navigationLink" id="lnkReportsAustralien" data-site="report_3">Berichte</a>
+                <a href="#" class="navigationLink" id="lnkMapAustralien" data-site="map_3">Reiseroute</a>
+                <a class="navigationLink" id="lnkPicsAustralien" href="#" data-site="pics_3">Fotos</a>
+            </div>
+        </div>
+        <div class="w3-accordion">
+            <a id="accordionBenelux" href="javascript:void(0)" data-accordion-name="BeneluxAccordion" class="accordionLink">Europa Trip <i class="fa fa-caret-down"></i></a>
+            <div id="BeneluxAccordion" class="w3-accordion-content w3-animate-left w3-padding">
+                <a href="#" class="navigationLink" id="lnkReportsBenelux" data-site="report_2">Berichte</a>
+                <a href="#" class="navigationLink" id="lnkMapBenelux" data-site="map_2">Reiseroute</a>
+                <a class="navigationLink" id="lnkPicsBenelux" href="#" data-site="pics_2">Fotos</a>
+            </div>
+        </div>
+        <div class="w3-accordion">
+            <a id="accordionVelo" href="javascript:void(0)" data-accordion-name="veloAccordion" class="accordionLink">Veloabenteuer <i class="fa fa-caret-down"></i></a>
+            <div id="veloAccordion" class="w3-accordion-content w3-animate-left w3-padding">
+                <a href="#" class="navigationLink" id="lnkReportsVelo" data-site="report_1">Berichte</a>
+                <a href="#" class="navigationLink" id="lnkMapVelo" data-site="map_1">Reiseroute</a>
+                <a class="navigationLink" id="lnkPicsVelo" href="#" data-site="pics_1">Fotos</a>
+                <!--<a href="#">Ausrüstung</a>-->
+            </div>
+        </div>
+        <div class="w3-accordion">
+            <a id="accordionVorbereitungen" href="javascript:void(0)" data-accordion-name="vorbereitungAccordiom" class="accordionLink">Vorbereitung <i class="fa fa-caret-down"></i></a>
+            <div id="vorbereitungAccordiom" class="w3-accordion-content w3-animate-left w3-padding">
+                <a href="#" id="lnkReportsVorbereitung" class="navigationLink" data-site="report_0">Berichte</a>
+                <a href="#" id="lnkMapVorbereitung" class="navigationLink" data-site="map_0">Trainigstouren</a>
+            </div>
+        </div>
+        
 
 
 
     </nav>
 
-    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" style="cursor:pointer" id="myOverlay"></div>
 
     <div class="w3-main" style="margin-left:250px;">
 
-        <div id="myTop" class="w3-top w3-container w3-padding-16 w3-theme w3-large w3-orange">
-            <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right" onclick="w3_open()"></i>
+        <div id="myTop" class="w3-top w3-container w3-padding-16 w3-transparent w3-text-black w3-large">
+            <i class="fa fa-bars w3-opennav w3-hide-large w3-xlarge w3-margin-left w3-margin-right w3-text-black" id="hamburgerButton"></i>
             <span id="myIntro" class="w3-hide">Luana &amp; Andy on Tour</span>
         </div>
 
-        <header class="w3-container w3-theme w3-padding-64 w3-orange" style="padding-left:32px">
-            <h1 class="w3-xxxlarge w3-padding-16">Luana &amp; Andy on Tour</h1>
-        </header>
+        <header class="w3-container w3-theme w3-padding-64 header_background" style="padding-left:32px"></header>
 
         <div class="w3-container w3-padding-32" ID="maincontentArea" style="padding-left:32px">
 
@@ -59,17 +102,11 @@
 
 
     </div>
+    <div id="photoswipeContent"></div>
 
     <script>
         // Open and close the sidenav on medium and small screens
-        function w3_open() {
-            document.getElementById("mySidenav").style.display = "block";
-            document.getElementById("myOverlay").style.display = "block";
-        }
-        function w3_close() {
-            document.getElementById("mySidenav").style.display = "none";
-            document.getElementById("myOverlay").style.display = "none";
-        }
+
 
         // Change style of top container on scroll
         window.onscroll = function () { myFunction() };
@@ -84,17 +121,7 @@
         }
 
         // Accordions
-        function myAccordion(id) {
-            var x = document.getElementById(id);
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-                x.previousElementSibling.className += " w3-theme";
-            } else {
-                x.className = x.className.replace("w3-show", "");
-                x.previousElementSibling.className =
-                x.previousElementSibling.className.replace(" w3-theme", "");
-            }
-        }
+
     </script>
 
 </body>

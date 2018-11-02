@@ -2,8 +2,8 @@
 
 // ----- Entwicklung ----
 // In diesem File werdern die Angaben zur Datenbank angegeben.
-$specDatabase_user = "ontour";
-$specDatabase_pass = "u2pE9BbjsHxw";
+$specDatabase_user = "localhost";
+$specDatabase_pass = "einpasswort";
 $specatabase_host = "localhost";
-$specatabase_name = "andynick_test";
+$specatabase_name = "andynick_local";
 ?>

@@ -1,129 +1,149 @@
 <?php
 
-require_once $_SESSION['rootfolder'] . '/API/API.php';
-
+require_once $_SESSION['rootfolder'] . '/API/SmartyAPI.php';
+require_once $_SESSION['rootfolder'] . '/DataProvider/GalleryProvider.php';
 
 /**
  * Description of FotosAPI
  *
  * @author Andy
  */
-class FotosAPI extends API {
+class FotosAPI extends SmartyAPI {
 
     public function __construct($request, $origin) {
         parent::__construct($request);
         //Security Handling        
     }
 
-    public function Show($args) {
+    public function ShowVelo($args) {
         header("Content-Type: text/html");
-        $smarty = new Smarty();
+        $smarty = $this->createSmarty('Fotos');
 
-        $smarty->template_dir = $_SESSION['rootfolder'] . '/API/Fotos/templates/';
-        $smarty->compile_dir = $_SESSION['rootfolder'] . '/API/Fotos/templates_c/';
-        $smarty->config_dir = $_SESSION['rootfolder'] . '/API/Fotos/configs/';
-        $smarty->cache_dir = $_SESSION['rootfolder'] . '/API/Fotos/cache/';
+        $galleryProvider = new GalleryProvider();
+        $countries = $galleryProvider->GetCountries(1);
 
-        $galleryProvider = new GallerieProvider();
-        $years = $galleryProvider->GetAllYears();
-        $smarty->assign('years', $years);
+        $smarty->assign("countries", $countries);
 
-
-
-        if ($args[0] != '') {
-            $events = $galleryProvider->GetEventsByYear($args[0]);
-            $smarty->assign('currentYear', $args[0]);
+        if (count($args) > 0) {
+            $currentCountryID = array_shift($args);
+            $currentCountry = $galleryProvider->GetCountryByID($currentCountryID)[0][1];
+        } else {
+            $currentCountry = $galleryProvider->GetNewestCountry(1)[0][1];
+            $currentCountryID = $galleryProvider->GetNewestCountry(1)[0][0];
         }
-        else {
-            $events = $galleryProvider->GetEventsByYear();
-            $smarty->assign('currentYear', max($years[0]));
-        }
-        $smarty->assign('events', $events);
+        $smarty->assign("currentCountry", $currentCountry);
 
-        $thumbnails = [];
+        $galleries = $galleryProvider->GetgalleryByCountry($currentCountryID, 1);
 
-        foreach ($events as $event) {
-            $pics = [];
-            $picsFromDB = $galleryProvider->GetImagesByGallerieId($event[1], 4);
-            $path = $galleryProvider->GetGalleriePath($event[1]);
-            for ($i = 0; $i < 4; $i++) {
-                if (isset($picsFromDB[$i])) {
-                    $pics[$i] = $path . "/ANZ/" . $picsFromDB[$i]['PICS_ANZ'];
-                }
-            }
-            $thumbnails[$event[1]] = $pics;
-        }
-        $smarty->assign('thumbnails', $thumbnails);
+        $smarty->assign("galleries", $galleries);
+
         $smarty->display('Fotos.tpl');
     }
 
-    public function GetYearPreview($args) {
+    public function ShowBenelux($args) {
         header("Content-Type: text/html");
-        $smarty = new Smarty();
+        $smarty = $this->createSmarty('Fotos');
 
-        $smarty->template_dir = $_SESSION['rootfolder'] . '/API/Fotos/templates/';
-        $smarty->compile_dir = $_SESSION['rootfolder'] . '/API/Fotos/templates_c/';
-        $smarty->config_dir = $_SESSION['rootfolder'] . '/API/Fotos/configs/';
-        $smarty->cache_dir = $_SESSION['rootfolder'] . '/API/Fotos/cache/';
+        $galleryProvider = new GalleryProvider();
+        $countries = $galleryProvider->GetCountries(2);
 
-        $galleryProvider = new GallerieProvider();
+        $smarty->assign("countries", $countries);
+
+        if (count($args) > 0) {
+            $currentCountryID = array_shift($args);
+            $currentCountry = $galleryProvider->GetCountryByID($currentCountryID)[0][1];
+        } else {
+            $currentCountry = $galleryProvider->GetNewestCountry(2)[0][1];
+            $currentCountryID = $galleryProvider->GetNewestCountry(2)[0][0];
+        }
+        $smarty->assign("currentCountry", $currentCountry);
+
+        $galleries = $galleryProvider->GetgalleryByCountry($currentCountryID, 2);
+
+        $smarty->assign("galleries", $galleries);
+
+        $smarty->display('Fotos.tpl');
+    }
+    
+    public function Show($args) {
+        header("Content-Type: text/html");
         
-        if ($args[0] != '') {
-            $events = $galleryProvider->GetEventsByYear($args[0]);
-            $smarty->assign('currentYear', $args[0]);
-        }
-        else {
-            $events = $galleryProvider->GetEventsByYear();
-            $smarty->assign('currentYear', max($years[0]));
-        }
-        $smarty->assign('events', $events);
+        $tourpart = array_shift($args);
+        
+        $smarty = $this->createSmarty('Fotos');
 
-        $thumbnails = [];
+        $galleryProvider = new GalleryProvider();
+        $countries = $galleryProvider->GetCountries(2);
 
-        foreach ($events as $event) {
-            $pics = [];
-            $picsFromDB = $galleryProvider->GetImagesByGallerieId($event[1], 4);
-            $path = $galleryProvider->GetGalleriePath($event[1]);
-            for ($i = 0; $i < 4; $i++) {
-                if (isset($picsFromDB[$i])) {
-                    $pics[$i] = $path . "/ANZ/" . $picsFromDB[$i]['PICS_ANZ'];
-                }
-            }
-            $thumbnails[$event[1]] = $pics;
+        $smarty->assign("countries", $countries);
+
+        if (count($args) > 0) {
+            $currentCountryID = array_shift($args);
+            $currentCountry = $galleryProvider->GetCountryByID($currentCountryID)[0][1];
+        } else {
+            $currentCountry = $galleryProvider->GetNewestCountry($tourpart)[0][1];
+            $currentCountryID = $galleryProvider->GetNewestCountry($tourpart)[0][0];
         }
-        $smarty->assign('thumbnails', $thumbnails);
-        $smarty->display('YearPreview.tpl');
+        $smarty->assign("currentCountry", $currentCountry);
+        echo $currentCountry;
+        $galleries = $galleryProvider->GetgalleryByCountry($currentCountryID, $tourpart);
+
+        $smarty->assign("galleries", $galleries);
+
+        $smarty->display('Fotos.tpl');
     }
 
-    public function GetEventPreview($args) {
-        header("Content-Type: text/html");
-        $smarty = new Smarty();
+    public function Country($args) {
 
-        $smarty->template_dir = $_SESSION['rootfolder'] . '/API/Fotos/templates/';
-        $smarty->compile_dir = $_SESSION['rootfolder'] . '/API/Fotos/templates_c/';
-        $smarty->config_dir = $_SESSION['rootfolder'] . '/API/Fotos/configs/';
-        $smarty->cache_dir = $_SESSION['rootfolder'] . '/API/Fotos/cache/';
+        $smarty = $this->createSmarty('Fotos');
 
-        $galleryProvider = new GallerieProvider();
-        $path = $galleryProvider->GetGalleriePath($args[0]);
-        $pics = $galleryProvider->GetImagesByGallerieId($args[0]);
-        for ($i = 0; $i < count($pics); $i ++) {
-            $imgPath = $path . "/ANZ/" . $pics[$i]['PICS_ANZ'];
+        $galleryProvider = new GalleryProvider();
+        $action = array_shift($args);
+        $countryID = array_shift($args);
 
-            $size = getimagesize($_SESSION['rootfolder'] . "/../" . $imgPath);
-
-            $picsArray[$i] = [
-                "path" => $imgPath,
-                "width" => $size[0],
-                "height" => $size[1]
-            ];
+        if ($action == 'preview') {
+            header("Content-Type: text/html");
+            $tourpart = array_shift($args);
+            $galleries = $galleryProvider->GetgalleryByCountry($countryID, $tourpart);            
+            $smarty->assign("galleries", $galleries);
+            $smarty->display('CountryPreview.tpl');
         }
+        if ($action == 'name') {
+            header("Content-Type: application/json");
+            $result = $galleryProvider->GetCountryByID($countryID);
+            return json_encode(count($result) == 1 ? $result[0][1] : "");
+        }
+    }
 
-        $smarty->assign('pics', $picsArray);
-        $smarty->assign('year', $galleryProvider->GetYearByEventID($args[0]));
-        $smarty->assign('eventTitle', $galleryProvider->GetTitleByID($args[0]));
+    public function Pics($args) {
 
-        $smarty->display('EventPreview.tpl');
+        $action = array_shift($args);
+        if ($action == "bygallery") {
+            $id = array_shift($args);
+
+
+            header("Content-Type: text/html");
+            $smarty = $this->createSmarty("Fotos");
+            $galleryProvider = new GalleryProvider();
+            $path = "gallery/large";
+            $pics = $galleryProvider->GetImagesByGallerieId($id);
+            for ($i = 0; $i < count($pics); $i ++) {
+                $imgPath = $path . "/" . $pics[$i]['PicPath'];
+                $size = getimagesize($_SESSION['rootfolder'] . "/../" . $imgPath);
+
+                $picsArray[$i] = [
+                    "path" => $imgPath,
+                    "width" => $size[0],
+                    "height" => $size[1]
+                ];
+            }
+
+            $smarty->assign('pics', $picsArray);
+            $smarty->assign('country', $galleryProvider->GetCountryByGallerieID($id)[0][0]);
+            $smarty->assign('eventTitle', $galleryProvider->GetGalleryByID($id)[0][1]);
+
+            $smarty->display('EventPreview.tpl');
+        }
     }
 
     public function GetPhotoSwipeForm($args) {
